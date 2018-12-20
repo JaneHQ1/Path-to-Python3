@@ -1,0 +1,17 @@
+两个字符串相加：
+"Hello"+"world"
+Helloworld
+字符串的乘法：
+"Hello"*3
+HelloHelloHello
+获取字符串中的单个字符？
+"Hello world"[0] 
+H
+[0]取字符串中的第一个字符。注意是从0开始计数。
+"Hello world"[-1]
+d
+[-1]从末尾往前数第一位。注意是从-1开始计算。
+课后练习：
+用两种方式获取'w'字符。
+"Hello world"[6]
+"Hello world"[-5]
