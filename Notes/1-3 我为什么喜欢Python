@@ -1,0 +1,6 @@
+The zen of python:
+& python -c 'import this' 
+Python 既有动态脚本的特性，又有面向对象的特性。
+语言分为两种：
+1. 需要compile,  e.g. Java, C
+2. 动态解析不需要compile. 不需要考虑变量的类型？不需要define variables？
