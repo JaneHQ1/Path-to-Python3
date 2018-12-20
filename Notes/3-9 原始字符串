@@ -1,0 +1,14 @@
+输出文件夹路径：
+print('c:\northwind\northwest')
+c:
+orthwind
+orthwest
+Solution 1:
+print('c:\\northwind\\northwest')
+c:\northwind\northwest
+Solution 2: 
+print(r'c:\northwind\northwest')
+c:\northwind\northwest
+加上r以后，就不是普通字符串，而是原始字符串。不会把'\n'当作新的一行。
+Question: print(r'Let's go') Is it correct?
+NO!! 字符串的引号必须成对出现，要不就不是字符串了，更不是原始字符串。
