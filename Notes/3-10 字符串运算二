@@ -1,0 +1,15 @@
+1. 截取字符串中的一组字符：
+截取"Hello World" 中的"Hello"
+"Hello world"[0:4]
+Hell
+"Hello world"[0:5]
+Hello
+为什么[0:4]不可以？
+规定要到你想要的字符后一位。
+"Hello world"[0:-1]
+Hello worl
+这里-1不表示字符的序号，表示步长。
+课后练习：
+两种方式截取"world"
+"Hello world"[6:11]
+第二种方法想不出来
