@@ -1,0 +1,15 @@
+1.两种方式截取"world"
+"Hello world"[6:11] 
+"Hello world"[6:20]
+"Hello world"[6:] 从第6未开始截取，一直到字符串最末尾。
+2.为什么有复数的概念？
+"Hello python java C# javascript php ruby" 截取所有编程语言名称。
+"Hello python java C# javascript php ruby"[6:]
+"Hello python java C# javascript php ruby"[:-4] 相当于[0:-4]
+Hello python java C# javascript php
+3. 原始字符串r大小写皆可。
+r'C:\Windows'
+'C:\\Windows'
+R'C:\Windows'
+'C:\\Windows'
+这里有两条'\\'是因为其中一个'\'代表了R。如果在print()里就只有一条'\'。
