@@ -13,12 +13,7 @@
   值类型:int,str,tuple
   引用类型:list,set,dict
   值类型不可变，引用类型可变。
-  (http://github.com/yourname/your-repository/raw/master/images-folder/xxx.png)
-
-   [image text]!(https://github.com/JaneHQ1/Path-to-Python3/raw/master/Notes/Images/5-3-2.PNG)
-  
-  
-  
+   ![image](https://github.com/JaneHQ1/Path-to-Python3/raw/master/Notes/Images/5-3-2.PNG)
   字符串不可变，为什么可以增加字符串？
   a='hello'
   print(id(a))
