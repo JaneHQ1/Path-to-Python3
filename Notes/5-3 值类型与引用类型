@@ -10,5 +10,14 @@
   b=a
   a[0]='1'
   print(b) b改变了why?
-  int：值类型 list：引用类型
-  
+  值类型:int,str,tuple
+  引用类型:list,set,dict
+  值类型不可变，引用类型可变。
+  字符串不可变，为什么可以增加字符串？
+  a='hello'
+  print(id(a))
+  2277377864512
+  a=a+'python'
+  print(id(a))
+  2277380468400
+  两个a的内存地址不一样，所以两个a实际上不是一个字符串。
