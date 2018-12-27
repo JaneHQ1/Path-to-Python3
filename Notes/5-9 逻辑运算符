@@ -1,0 +1,20 @@
+1.逻辑运算符
+  and
+  or
+  not
+2.逻辑运算符操作的是bool类型，返回类型也是bool。
+3.非bool类型做逻辑运算，怎样分辨True和False？
+  int float 0 被认为是False，非0被认为True。
+  字符串 空字符串False，其余为True。
+  not '0' -> False
+  []空的列表 False，其余为True。
+  tuple,set,dict类似。
+4.逻辑运算符返回类型不一定是bool类型。
+  [1]or[]->[1]
+5.1 and 2都是真，为什么返回2？
+  1 and 2 -> 2
+  and需要判断两个元素，所以返回最后一个。
+6.1 0r 2 为什么返回1？
+  第一个是1后面的数字就无需读取，所以返回1。
+  
+  
