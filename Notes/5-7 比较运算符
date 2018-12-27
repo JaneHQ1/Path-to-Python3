@@ -13,4 +13,7 @@
    b+=b>=1
    print(b) 得2
    运算符是有priority的，赋值运算符优先于比较运算符。
-  
+   b+=True
+   b=1+True int可以和bool相加。
+   int(True)=1
+   b=b+1
