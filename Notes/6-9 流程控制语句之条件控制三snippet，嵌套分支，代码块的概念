@@ -1,0 +1,31 @@
+1.snippet 片段
+  作用：快速构建代码片段。
+  按tab可以直接切换到下一个代码编写区域。
+  shift+tab可以回到上一行。
+2.if和else不一定要连在一起使用。if可以单独使用，但else不行。
+3.if True
+      pass #空语句/占位语句，不知道写什么用pass占位，要不会报错。
+  有的时候我们需要先把代码定义下来，就可以用pass。比如所写API接口的时候只有名字，很多代码是空的。
+4.if else 是一个结构体，两个if是两个结构体。这和变量的作用域是有关系的，我们需要知道哪个变量是哪个结构体的。
+5.代码块:如果有一行被执行，其他的也会被执行。
+  if condition:
+      code1
+          code11
+          code12
+      code2
+      code1和code2是一个代码块。code11和code12是另一个代码块。
+6.if else 嵌套的使用就是在代码块里套另一个代码块。建议不要嵌套多层，阅读感差。可以将嵌套的if else写成一个函数。
+  if condition:
+      if condition:
+          pass
+      else:
+          pass
+  else:
+      if condition:
+          pass
+      else:
+          pass
+7.一个代码块有相同的缩进。
+          
+
+      
