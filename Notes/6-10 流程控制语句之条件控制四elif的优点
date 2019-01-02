@@ -1,4 +1,4 @@
-a = int(input())
+a = int(input()) #a接受的是string，并不是integer
 if a==1:
     print('apple')
 else:
