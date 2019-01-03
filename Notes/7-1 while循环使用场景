@@ -1,0 +1,9 @@
+1.循环语句 while
+while counter<= 10:
+    print(counter)
+    counter += 1
+else:
+    print('EOF')
+2.while使用场景
+*达到目标后停止，执行else中的命令。
+*递归 recursion
