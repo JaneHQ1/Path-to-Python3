@@ -1,0 +1,10 @@
+1.dir()括号里没有任何参数，它就显示当前模块的相关变量。
+2.如果想显示指定的模块或者指定的类，可以把变量作为参数传到dir函数里。
+import sys
+infos = dir(sys)
+print(infos)
+3.Make a script both importable and executable.
+让python脚本记可以作为普通的模块提供给其他的应用程序调用，也可以成为可以执行的文件。
+if__name__ == '__main__':
+    pass
+   
