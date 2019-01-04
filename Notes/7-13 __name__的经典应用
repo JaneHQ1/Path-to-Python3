@@ -5,6 +5,8 @@ infos = dir(sys)
 print(infos)
 3.Make a script both importable and executable.
 让python脚本记可以作为普通的模块提供给其他的应用程序调用，也可以成为可以执行的文件。
-if__name__ == '__main__':
-    pass
-   
+if__name__ == '__main__': 
+    print('This is an app')
+可以判断当前文件是否是入口文件。
+import 
+
