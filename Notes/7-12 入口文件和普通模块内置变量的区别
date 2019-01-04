@@ -1,0 +1,21 @@
+name:c7_7
+package:
+doc:
+Created on Thu Jan  3 15:54:59 2019
+
+@author: janej
+
+file:C:\Users\janej\OneDrive\NB\Python3\c7_7.py
+name:__main__
+package:当前模块不属于任何包
+doc:
+Created on Wed Jan  2 10:52:02 2019
+
+@author: janej
+
+file:C:/Users/janej/OneDrive/NB/Python3/c6_8.py
+
+1.入口文件名是__main__。
+2.入口文件不属于任何包。
+3.file 取值和执行python命令所在目录有关系。
+4.入口文件的file没有路径，只有文件名。c6_8当作应用程序的入口，用python命令执行，但是c7_7是一个普通的python模块。
