@@ -1,0 +1,12 @@
+1.round()可以四舍五入。
+a = 1.2345678
+result = round(a,2)
+print(result)
+2.查看函数功能：
+help(round)
+import this -> the zen of python
+3.函数的理解：
+*功能性
+*隐藏细节
+*避免编写重复的代码
+*组织代码（主要是对象的功能）？
