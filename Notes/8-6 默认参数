@@ -1,0 +1,26 @@
+3.默认参数
+如果有很多参数，可以给参数默认值，用户就不用输入很多参数。
+def print_student_files(name, gender, age, college):
+    print('我叫' + name)
+    print('我今年' + age + '岁')
+    print('我是' + gender + '生')
+    print('我在' + college + '上学')
+print_student_files('鸡小萌', '男', '8', '人民路小学')
+使用默认参数：
+def print_student_files(name, gender='男', age='8',
+                        college='人民路小学'):
+    print('我叫' + name)
+    print('我今年' + age + '岁')
+    print('我是' + gender + '生')
+    print('我在' + college + '上学')
+print_student_files('鸡小萌')
+
+2.定义的时候给形参赋值就是默认参数。
+3.如果要改变默认参数，就正常传递参数。
+4.定义参数时必须参数不能放在默认参数后面。
+def print_student_files(name, gender='男', age='8',
+                        college='人民路小学',teacher):
+5.用关键字参数可以不按照顺序给参数赋值。
+print_student_files('果果', age = '7')
+6.调用的时候也不能将默认值参数和必须参数混在一起，和定义参数类似。
+print_student_files('果果', gender='女', '7', college='光明小学')
