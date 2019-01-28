@@ -1,0 +1,35 @@
+class Student():
+    # 不能理解为全局变量。
+    # 类变量,不能在这里定义实例变量
+    name = 'Jane'
+    age = 0
+    sum = 0  # 一个班级所有学生的总人数
+
+    def __init__(self, name, age):
+        # 构造函数
+        # 初始化对象的特征
+
+        name = name
+        age = age
+
+
+student1 = Student('石敢当', 18)
+print(student1.name)
+print(Student.name)
+
+输出：
+Jane
+Jane
+
+1.为什么我想打印实例变量，但最后打印的是类变量？
+需要通过self给实力变量赋值，但是这里没有。
+2.验证student1内部有没有实例变量name：
+print(student1.__dict__)
+输出：
+{}
+这里dict打印的是空字典，所以student1里没有任何实例变量。
+3.为什么不存在实例变量，不打印None，而是打印类变量？
+Python寻找相关变量的机制：
+Python访问一个实例变量，先在对象的实例变量列表中寻找，如果没有，他不会直接返回None，而是到类变量中寻找。如果类里也找不到，回到副类中寻找。
+注意：
+这里和全局变量没有关系。
