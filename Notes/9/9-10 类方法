@@ -1,0 +1,79 @@
+1. 在构造函数中改变类变量sum
+"""
+class Student()
+    sum = 0  # 一个班级所有学生的总人数
+    
+    # 构造函数
+    def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+        self.__class__.sum += 1
+        print('当前班级学生总数为：' + str(self.__class__.sum))
+
+
+student1 = Student('石敢当', 18)
+student2 = Student('喜小乐', 18)
+"""
+
+输出：
+当前班级学生总数为：1
+当前班级学生总数为：2
+
+2. 也可以在实例方法中改变变量sum，但是调用方法不一样，用object调用。
+"""
+class Student():
+    sum = 0  # 一个班级所有学生的总人数
+    
+    # 构造函数
+    def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+    
+    # 实例函数
+    def do_homework(self):
+        self.__class__.sum += 1
+        print('当前班级学生总数为：' + str(self.__class__.sum))
+        
+        
+student1 = Student('石敢当', 18)
+student2 = Student('喜小乐', 18)
+student1.do_homework()
+student2.do_homework()
+"""
+输出：
+当前班级学生总数为：1
+当前班级学生总数为：2
+
+3. 定义类方法
+- 区分类方法和实例方法：类方法增加了一个装饰器
+- 参数列表的不同并不能区分类方法，因为参数列表可以修改名字。
+- 同理类方法的cls也可以修改成其他名字
+- cls代表的是调用类方法的类Student
+"""
+    # 定义类方法
+    @classmethod # @的形式叫做装饰器 
+    def plus_sum(cls):
+        # 参数列表里有特定名字cls，class的简写
+        # 意义和实例列表中的self一样
+        cls.sum += 1
+        print('当前班级学生总数为：' + str(cls.sum))
+"""
+4. 类方法的调用
+用class调用
+Student.plus_sum()
+
+5. 实例方法与类方法的区别
+- 实例方法关联的是对象。
+- 类方法关联的是类本身。
+
+6. 在实例方法中可以操作类变量，为什么还需要类方法？
+如果操作一个和对象无关的变量，最好使用类方法。
+并不是说用实例方法不对，只是意义说不通。
+
+7. 可不可以用对象调用类方法？
+student1.plus_sum()
+语法上可以，但逻辑上说不通，不推荐。
+
+
