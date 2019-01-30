@@ -1,0 +1,38 @@
+case1:
+c = 1
+def func1():
+    c = 2
+    def func2():
+        c = 3
+        print(c)
+    func2()
+func1()
+OUTPUT:
+3
+Case2:
+c = 1
+def func1():
+    c = 2
+    def func2():
+        # c = 3
+        print(c)
+    func2()
+func1()
+OUTPUT
+2
+func2中没有c变量，于是从上一层调取c=2。
+Case3:
+c = 1
+def func1():
+    # c = 2
+    def func2():
+        # c = 3
+        print(c)
+    func2()
+func1()
+OUTPUT
+1
+func1中没有c变量，于是从上一层调取c=1.
+1. 作用域链：
+作用域具有层级寻找的特性。
+2.for loop不算作用域链，因为for loop 没有办法形成一个单独的作用域，所以不存在层级寻找。
