@@ -59,7 +59,7 @@ student1.marking(59) # 通过调用方法marking修改score
 输出结果：
 石敢当同学本次考试分数为：59
 
-4. 通过方法比直接做数据修改方便很多。为什么？
+4. 通过方法比直接做数据修改安全很多。为什么？
 直接对实例变量修改没有限制，但是对方法修改可以有限制。
     def marking(self, score):
         if score < 0:
@@ -73,3 +73,35 @@ result = student1.marking(-1)
 print(result)
 输出结果：
 不能够打负分
+
+5. 如果要修改类的特征值，不应该通过直接访问变量的方式改变变量的状态。正确的方式是所有对于类下面变量的更改都应该通过方法来完成。所有的编程语言都这样提倡。
+
+6. Public & Private
+a. 公开的变量可以在类的外部直接赋值和读取。
+方法前不加双下划线，Python都当作是公开方法。
+b. 私有的变量无法在类的外部赋值和读取。
+在方法名字前加双下划线可以将方法变为私有。
+def __marking(self, score):
+在外面调用私有方法会报错。
+
+7. 为什么构造函数前面有双下划线，但任然被认为是公开的？
+因为__init__前后都有双下划线，所以任然当作公开的。
+def __marking__(self, score):
+前后都加双下划线实际上任然是公开方法。
+前后都加双下划线是Python内置变量的命名风格，我们尽量不要这样命名。
+
+8. 如果我们不想让别人在外部修改变量，在变量前增加两个下划线把它变为私有的变量。
+class Student():
+	def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+        self.__score = 0
+
+    def __marking(self, score):
+        self.__score = score
+        print(self.name + '同学本次考试分数为：'+ str(self.__score))
+
+student1.__score = -1
+
+在外部强行调用私有变量不会报错，为什么？
