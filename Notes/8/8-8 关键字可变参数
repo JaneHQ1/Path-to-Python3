@@ -1,0 +1,32 @@
+1.可变参数列表的应用场景：
+def squsum(*param):
+    sum = 0
+    for i in param:
+        sum += i*i
+    print(sum)
+squsum(1, 2, 3)
+2.可变参数列表简化了函数的调用，不需要将传输参数转化成列表。
+3.如何实现任意个数的关键字参数？
+def city_temp(**param):
+    print(param)
+    print(type(param))
+    pass
+city_temp(bj='32c', xm='23c', sh='31c')
+OUTPUT:
+{'bj': '32c', 'xm': '23c', 'sh': '31c'}
+<class 'dict'>
+4.如何调用字典？
+def city_temp(**param):
+    for key,value in param.items():
+        print(key, ':', value)
+city_temp(bj='32c', xm='23c', sh='31c')
+OUTPUT：
+bj : 32c
+xm : 23c
+sh : 31c
+等同于传送字典：
+a = {'bj': '32c', 'xm': '23c', 'sh': '31c'}
+city_temp(**a)
+5.可变参数可以为空。
+city_temp()
+得到空的字典。
