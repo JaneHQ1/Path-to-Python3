@@ -1,0 +1,14 @@
+1.return后面的code不会执行。
+2.python不限制返回类型。
+3.函数返回两个值：
+def damage(skill1, skill2):
+    damage1 = skill1 * 3
+    damage2 = skill2 + 2 + 10
+    return damage1, damage2
+默认返回tuple。
+4.如何使用返回的元组？序列解包
+*利用序号提取数值，容易忘记元素意义，不建议。
+print(damage[0], damage[1])
+*用有意义的变量名称。
+skill1_dam, skill2_dam = damage(3, 6)
+print(skill1_dam, skill2_dam)
