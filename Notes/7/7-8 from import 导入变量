@@ -1,0 +1,23 @@
+1.导入方式二：
+from module import variable
+Example 1:
+from t.c7 import a
+print(a)
+from import 导入的是变量，所以变量前就不用加路径了。
+Example 2:
+from t import c7
+print(c7.a)
+也可以引用模块。
+2. 导入全部模块
+from t.c7 import *
+3.如何只导入需要的变量？
+#t.c7:
+__all__=['a','c'] #模块的内置变量。
+a = 1
+b = 2
+c = 3
+#c8
+from t.c7 import *
+print(a)
+print(b)
+
