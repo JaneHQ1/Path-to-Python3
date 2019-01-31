@@ -1,0 +1,19 @@
+1. 上节课后思考：为什么我们我们对私有变量在外部强行赋值不会报错？
+尝试读取后发现我们不仅可以赋值还可以读取。
+student1.__score = -1  #给student1新添加了一个新的实例变量，这和之前的__score不是一个。
+print(student1.__score)
+输出结果
+-1
+Python可以通过点的方式新添加实例变量。
+print(student1.__dict__)  #打印student1的dict列表
+输出结果：
+{'name': '石敢当', 'age': 18, '_Student__score': 59, '__score': -1}
+'_Student__score'是我们之前存储的私有变量，Python会做一些修改。
+'__score'是我们动态定义的实例变量。
+无法访问私有变量是因为Python已经将私有变量改名。这就是Python对私有变量的保护机制。
+所以我们无法动态添加私有变量，添加以后它任然存在于dict列表中，所以任然可以读取。
+
+2. 严格意义上说，Python是没有私有变量的。
+通过dict读取到更改过后的私有变量名称，然后用这个名称任然可以读取到私有变量。
+print(student1._Student__score)
+
