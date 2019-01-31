@@ -1,0 +1,23 @@
+1. 子类调用父类构造函数
+Human.__init__(self, name, age)
+有两点奇怪的地方：
+a. Human是一个类，不是对象。 我们把构造函数当作一个实例方法，一个类调用实例方法是不正确的。
+b. 我们在实例化的时候不需要传送self，但是在调入构造函数的时候要传送一个self。 实例化调用构造函数，Python内部实例化的机制自动帮我们调用构造函数，Python会自动帮我们补全self。但是这里是用类调用实例方法，不使用实例化的类调用的，所以需要自己传入。
+student1 = Student('人民路小学','石敢当', 18)  # 实例化调用构造函数
+Example：
+Student.do_homework（）  # 类调用方法是不可行的
+Student.do_homework(student1)  # 将父对象作为参数调用可行，但没有意义
+Student.do_homework('')  # 这里的self变成一个普通的参数，只要参数满足就可以
+
+2. 缺点:如果更换Student的父类，相继要改变整个代码。
+开bi原则：代码开放，但更改自己本身的代码是关闭的。
+不应该因为改变父类而改变整个代码。
+
+3. 第二个方式：
+super(Student, self).__init__(name, age)
+
+4. super不仅仅用在构造函数，其他的实例方法也可以使用。
+super(Student, self).do_homework()
+
+5. 子类方法和父类方法可以重名，Python优先调用子类方法
+
