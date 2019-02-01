@@ -12,6 +12,7 @@ print(r)
 
 # [a-z][a-z][a-z]等同于[a-z]{3}
 # [a-z]{3,6}表示[a-z]字符集重复3到6次
+# Note: {} 中间没有空格
 r = re.findall('[a-z]{3,6}', a)
 print(r)
 
