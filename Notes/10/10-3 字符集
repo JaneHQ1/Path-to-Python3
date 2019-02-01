@@ -8,7 +8,7 @@ import re
 s = 'abc, acc, adc, aec, afc, ahc'
 r = re.findall('a[cf]c]', s)
 # 'a[cf]c]'普通字符和元字符混合使用。
-# 括号中[cf]是或的关系，c||f
+# 括号中[cf]是或的关系，c|f
 # 通常普通字符的作用是定界。如果没有a和c定界，无法获得单词。
 print(r)
 输出结果：
@@ -29,3 +29,6 @@ print(r)
 
 输出结果：
 ['acc', 'adc', 'aec', 'afc']
+
+Summary
+1）元字符中的字符集
