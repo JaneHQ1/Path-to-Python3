@@ -1,0 +1,24 @@
+1.dir()括号里没有任何参数，它就显示当前模块的相关变量。
+2.如果想显示指定的模块或者指定的类，可以把变量作为参数传到dir函数里。
+import sys
+infos = dir(sys)
+print(infos)
+3.Make a script both importable and executable.
+让python脚本记可以作为普通的模块提供给其他的应用程序调用，也可以成为可以执行的文件。
+if__name__ == '__main__': 
+    print('This is an app')
+可以判断当前文件是否是入口文件。
+4.一个普通模块要有一个包。除非这是一个可以执行的文件。
+D:\python\seven> python -m c15.py （错误）
+D:\python> python -m seven.c15  （正确）
+把seven当作一个包，才可以把c15当作普通模块执行。
+5.c15的package是seven，如何导入c9?
+import seven.t.t1.c9
+为什么加上package seven?
+这涉及相对导入和绝对导入。
+5.两种执行文件的方法
+*文件路径
+D:\python> python seven\c15.py
+*命名空间
+D:\python> python -m seven.c15
+
