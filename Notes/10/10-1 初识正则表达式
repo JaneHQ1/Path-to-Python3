@@ -1,0 +1,41 @@
+正则表达式 Regular Expression
+1. 正则表达式，爬虫的基础。
+
+2. Json：轻量级的数据格式，web数据交换的主流主流结构。
+   XLM：现在用的少了
+   
+3. 正则表达式是一个特殊的字符序列，它可以检测一个字符串是否与我们所设定的这样的字符序列相匹配。
+如果匹配，可以快速检索文本，实现替换文本的操作。
+
+4. 使用场景：
+a. 检查一串数字是否是电话号码
+b. 检测一个字符串是否符合email
+c. 把一个文本里制定的单词替换成为另一个单词
+
+5. 内置函数举例
+# Is 'Python' in the string below?
+a = 'C|C++|Java|C#|Python|Javascript'
+# Method 1：print True if 'Python' is in the string
+print(a.index('Python') > -1)
+# Method 2: print True if 'Python' is in the string
+print('Python' in a)
+简单的判断优先选择Python的内置函数，当这些函数不能满足要求，优先选择正则表达式。
+
+6. 正则函数举例
+import re
+a = 'C|C++|Java|C#|Python|Javascript'
+# re.findall('正则表达式', '匹配的字符串')
+r = re.findall('Python', a)
+print(r)
+输出结果：
+['Python'] # findall打印结果是列表
+这个返回结果没有意义，因为我们指定的是常量字符串，没有把正则表达式的规则表达出来。
+
+7. 正则表达式最重要的是规则。
+如果直接把字符串设置为常量字符串，它就失去了规则的意义。
+正则表达式的灵魂在于规则。
+
+Summary
+1）正则表达式使用常量字符串匹配
+2）正则表达式的灵魂在于规则。
+
