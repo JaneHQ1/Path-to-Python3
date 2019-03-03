@@ -1,0 +1,48 @@
+1.for loop使用场景：
+*主要是用来遍历/循环序列或者集合，字典。
+a = [['apple','orange','banana','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        print(y,end=' ')
+2.for-else：当列表中所有的元素都遍历完了，就执行else中的内容。
+a = [['apple','orange','banana','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        print(y,end=' ')
+else:
+    print('No fruits')
+3.终端循环：
+*for loop中间break，循环立刻结束。
+a = [1,2,3]
+for x in a:
+    if x==2:
+        break
+    print(x)
+Output：
+1
+*for loop中间遇continue，跳过当前步骤，后面继续。
+or x in a:
+    if x==2:
+        continue
+    print(x)
+Output：
+1
+3
+4.break for loop，不会执行else中的命令。continue可以。
+5.为什么break以后还有后续元素？
+因为break打断了里面的第一个小循环，外面的大循环任然继续。
+a = [['apple','orange','banana','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        if y == 'orange':
+            break
+        print(y)
+else:
+    print('No fruits')
+Output：
+apple
+1
+2
+3
+No fruits
+
