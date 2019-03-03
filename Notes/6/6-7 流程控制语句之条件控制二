@@ -1,0 +1,14 @@
+1.if后面的不一定是bool，也可以是表达式。
+  d=[]
+  if d: 探空
+2.例子：用户登录（Python不推荐大写，推荐用下划线。）
+  account = 'qiyue'
+  password = '123456'
+  print('Username:')
+  user_account = input()
+  print('Password')
+  user_password = input()
+  if user_account == account and password == user_password:
+      print('Success')
+  else:
+      print('Fail')
